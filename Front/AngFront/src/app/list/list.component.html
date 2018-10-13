@@ -1,0 +1,34 @@
+<div class="Title" style="text-allign:">
+
+
+<h1>My First Mean Stack App</h1>
+</div>
+
+<div class="container" width="50%">
+  <img src="../../assets/emp1.png" /><br />
+  <button class="btn btn-info"  routerLink="/create"><i class="fas fa-address-book" ></i> Add New Employee</button>
+
+<table class="table" >
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Department</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Employee of Employee">
+      <th scope="row">1</th>
+      <td>{{Employee.name}}</td>
+      <td>{{Employee.age}}</td>
+      <td>{{Employee.dept}}</td>
+      <td> <button type="button" class="btn btn-success" (click)="editemp(Employee._id)">Update</button></td>
+      <td> <button type="button" class="btn btn-danger" (click)="DeleteUser(Employee._id)">Delete</button></td>
+    </tr>
+
+  </tbody>
+</table>
+</div>

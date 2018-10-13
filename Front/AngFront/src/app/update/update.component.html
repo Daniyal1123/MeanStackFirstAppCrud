@@ -1,0 +1,87 @@
+<div class="container" style="padding-top:50px">
+    <form class="form-horizontal" [formGroup]="UpdateForm" role="form" method="POST" action="/register">
+ <img src="../../assets/emp3.png" />
+        <div class="row">
+            <div class="col-md-3"> <br />
+</div>
+            <div class="col-md-6">
+                <h2>Update Employee</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label >Name</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                        <input type="text" class="form-control"
+                               placeholder="Enter Name" required autofocus formControlName="name" #name>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label >Age</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                        <input type="text"  class="form-control"
+                            placeholder="Enter Age"   required autofocus formControlName="age" #age>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label >Department</label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-danger">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem"><i class="fas fa-info"></i></div>
+                        <input type="text"  class="form-control"
+                               placeholder="Enter Department" required formControlName="dept" #dept>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-2" style="padding-left:70px">
+              <button type="submit" class="btn btn-success"  (click)="UpdateEmployee(name.value, age.value, dept.value)"><i class="fa fa-user-plus"></i> Update</button>
+
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+<!-- <p>
+  create works!
+</p>
+<form [formGroup]="UpdateForm" class="edit-form">
+  <input placeholder="Name" formControlName="name" #name>
+  <input placeholder="Age" formControlName="age" #age>
+<input placeholder="Dept" formControlName="dept" #dept>
+
+<button type="submit" (click)="UpdateEmployee(name.value, age.value, dept.value)">Save</button>
+
+
+
+</form> -->
